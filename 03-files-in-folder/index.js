@@ -2,7 +2,6 @@
 //  Данные должны быть выведены в формате <имя файла>-<расширение файла>-<вес файла>. Пример: ```example - txt - 128.369kb``` (округлять не нужно, конвертация в кб по желанию!)
 // - [ ] Информация должна выводиться только для файлов. Наличие информации о директориях считается ошибкой.
 
-const testFolder = './tests/';
 const fs = require('fs');
 const path = require('path');
 const url = path.join(__dirname, 'secret-folder');
@@ -10,7 +9,6 @@ const filesName = [];
 
 fs.readdir(url, {encoding:'utf8', 'withFileTypes':true}, (err, files) => {
   files.forEach(file => {
-      console.log(file)
       for(let key in file){
         filesName.push(file[key])  
     }
