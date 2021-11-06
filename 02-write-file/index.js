@@ -18,9 +18,7 @@ stdin.on('data', data =>{
         process.exit();
     }
     writeFile(Strdata, url);
-    
-    
-})
+});
 
 function fileHandler(url){
     fs.open(`${url}`, 'w', (err) => {
