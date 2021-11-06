@@ -10,7 +10,7 @@ const filesName = [];
 fs.readdir(url, {encoding:'utf8', 'withFileTypes':true}, (err, files) => {
   files.forEach(file => {
       for(let key in file){
-        filesName.push(file[key])  
+        filesName.push(file[key]); 
     }
     
   });
@@ -26,14 +26,3 @@ fs.readdir(url, {encoding:'utf8', 'withFileTypes':true}, (err, files) => {
   });
     
 });
-
-
-
-
-
-
-// filesName.forEach(item =>{
-//     fs.stat(`${url}/${item}`, (err, stats) => {
-//         console.log(`${item}: ${stats}`)
-//     })
-// })
